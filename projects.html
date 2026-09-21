@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects | Econova Power Solution — Solar EPC Portfolio</title>
+  <meta name="description" content="Completed solar EPC projects by Econova Power Solution across Maharashtra — industrial rooftop, commercial rooftop, ground-mounted and institutional solar installations.">
+  <meta name="theme-color" content="#1F3E7A">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Projects | Econova Power Solution — Solar EPC Portfolio">
+  <meta property="og:description" content="A portfolio of solar EPC projects across Maharashtra — rooftop, ground-mounted, commercial, industrial and institutional.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Econova Power Solutions Pvt. Ltd. – Home">
+        <img src="images/logo.png" alt="Econova Power Solutions Pvt. Ltd. logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+        <span class="logo-fallback" style="display:none">
+          <span class="logo-fallback-name">Econova</span>
+          <span class="logo-fallback-sub">Power Solutions Pvt. Ltd.</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link is-active" aria-current="page">Projects</a></li>
+          <li><a href="why-econova.html" class="nav-link">Why Econova</a></li>
+          <li class="nav-cta-wrap"><a href="contact.html" class="btn btn-primary nav-cta">Get a Site Assessment</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= PAGE HERO ======================= -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><span aria-current="page">Projects</span></li>
+          </ol>
+        </nav>
+        <p class="eyebrow">Our Work</p>
+        <h1 id="page-title" class="page-hero-title">Projects That Speak for Our Work</h1>
+        <p class="page-hero-text">A portfolio of solar EPC projects — rooftop, ground-mounted, commercial, industrial and institutional. Click any project to view its details.</p>
+      </div>
+    </section>
+
+    <!-- ======================= PORTFOLIO ======================= -->
+    <section class="section" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <!-- ================================================================
+             PLACEHOLDER CONTENT NOTICE
+             The projects shown on this page are placeholders driven by the
+             PROJECTS array in js/script.js. Replace that data with verified
+             completed projects before publishing. No client names, capacities
+             or completion years have been invented.
+             ================================================================ -->
+
+        <h2 id="portfolio-heading" class="section-title" style="margin-bottom:24px">Project Portfolio</h2>
+
+        <!-- Filter buttons (wired in js/script.js) -->
+        <div class="filters" role="group" aria-label="Filter projects by type">
+          <button type="button" class="filter-btn is-active" data-filter="All" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="Rooftop" aria-pressed="false">Rooftop</button>
+          <button type="button" class="filter-btn" data-filter="Ground Mounted" aria-pressed="false">Ground Mounted</button>
+          <button type="button" class="filter-btn" data-filter="Commercial" aria-pressed="false">Commercial</button>
+          <button type="button" class="filter-btn" data-filter="Industrial" aria-pressed="false">Industrial</button>
+          <button type="button" class="filter-btn" data-filter="Residential" aria-pressed="false">Residential</button>
+          <button type="button" class="filter-btn" data-filter="Institutional" aria-pressed="false">Institutional</button>
+        </div>
+
+        <!-- Project cards are rendered here by js/script.js -->
+        <div id="portfolioGrid" class="grid portfolio-grid" aria-live="polite"></div>
+
+        <p class="projects-empty" role="status">No projects match this filter.</p>
+
+        <div class="section-cta">
+          <a href="contact.html" class="btn btn-primary">Start a Project Like These</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PROJECT DETAIL MODAL ======================= -->
+    <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" id="projectModalBackdrop"></div>
+      <div class="modal-panel" id="projectModalPanel">
+        <button type="button" class="modal-close" id="projectModalClose" aria-label="Close project details">×</button>
+        <div class="modal-media">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-body">
+          <span class="modal-tag" id="modalTag"></span>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-location" id="modalLocation"></p>
+          <p id="modalDescription"></p>
+          <dl class="modal-grid">
+            <div class="modal-spec">
+              <dt>Client</dt>
+              <dd id="modalClient"></dd>
+            </div>
+            <div class="modal-spec">
+              <dt>Capacity</dt>
+              <dd id="modalCapacity"></dd>
+            </div>
+            <div class="modal-spec">
+              <dt>Project Scope</dt>
+              <dd id="modalScope"></dd>
+            </div>
+            <div class="modal-spec">
+              <dt>Completion Year</dt>
+              <dd id="modalCompletion"></dd>
+            </div>
+          </dl>
+          <h3 class="modal-detail-heading">Project Scope</h3>
+          <ul class="modal-detail-list" id="modalScopeList"></ul>
+          <div class="modal-cta">
+            <a href="contact.html" class="btn btn-dark">Plan a Similar Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo logo-footer" aria-label="Econova Power Solutions Pvt. Ltd. – Home">
+            <img src="images/logo.png" alt="Econova Power Solutions Pvt. Ltd. logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+            <span class="logo-fallback" style="display:none">
+              <span class="logo-fallback-name">Econova</span>
+              <span class="logo-fallback-sub">Power Solutions Pvt. Ltd.</span>
+            </span>
+          </a>
+          <p class="footer-tagline">Practical solar EPC solutions for commercial, industrial and institutional energy requirements.</p>
+        </div>
+        <nav class="footer-col" aria-label="Company links">
+          <h3 class="footer-heading">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="why-econova.html">Why Econova</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Solutions links">
+          <h3 class="footer-heading">Solutions</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#solar-epc">Solar EPC</a></li>
+            <li><a href="services.html#industrial-rooftop">Rooftop Solar</a></li>
+            <li><a href="services.html#ground-mounted">Ground-Mounted Solar</a></li>
+            <li><a href="services.html#solar-om">O&amp;M</a></li>
+            <li><a href="services.html#solar-consultancy">Consultancy</a></li>
+          </ul>
+        </nav>
+      </nav>
+        <div class="footer-col footer-contact">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-links">
+            <li><a href="tel:+918796257005">+91 87962 57005</a></li>
+            <li><a href="mailto:contact.econova4@gmail.com">contact.econova4@gmail.com</a></li>
+            <li>Ahilyanagar, Maharashtra, India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Econova Power Solutions Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
